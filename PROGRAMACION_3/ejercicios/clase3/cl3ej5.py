@@ -32,4 +32,4 @@ def encontrar_mayor(A: list[int]):
 
 lista = [5, 15, 27, 29, 35, 42, 50, 69, 420, 700]
 rotada = rotar_derecha(lista, 5)
-print(encontrar_mayor(rotada))
+print(f"El mayor elemento en la lista es {encontrar_mayor(rotada)}")

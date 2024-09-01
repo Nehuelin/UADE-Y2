@@ -6,31 +6,17 @@ import heapq
   
   
 class node: 
-    def __init__(self, freq, symbol, left=None, right=None): 
-        # frequency of symbol 
+    def __init__(self, freq, symbol, left=None, right=None):          
         self.freq = freq 
-  
-        # symbol name (character) 
-        self.symbol = symbol 
-  
-        # node left of current node 
+        self.symbol = symbol
         self.left = left 
-  
-        # node right of current node 
-        self.right = right 
-  
-        # tree direction (0/1) 
+        self.right = right  
         self.huff = '' 
   
     def __lt__(self, nxt): 
         return self.freq < nxt.freq 
-  
-  
-# utility function to print huffman 
-# codes for all symbols in the newly created Huffman tree 
+
 def printNodes(node, val=''): 
-  
-    # huffman code for current node 
     new_val = val + str(node.huff) 
   
     if(node.left): 
