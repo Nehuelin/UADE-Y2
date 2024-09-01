@@ -4,7 +4,10 @@
 def encontrar_coincidencia(A: list[int]):
     def encontrar_coincidencia_r(A: list[int], ini: int, fin: int):
         if ini == fin:
-            return ini
+            if ini == A[ini]:
+                return ini
+            else:
+                return -1
         
         mid = (ini + fin) // 2
 
@@ -17,5 +20,5 @@ def encontrar_coincidencia(A: list[int]):
 
     return encontrar_coincidencia_r(A, 0, len(A) - 1)
 
-lista = [0, 2, 4, 6, 8, 9, 10]
-print(encontrar_coincidencia(lista))
+lista = [4]
+print(f"Existe una coincidencia en el indice {encontrar_coincidencia(lista)}")
