@@ -1,7 +1,0 @@
-a) VERDADERO, ya que solo se coloca hasta los parametros del metodo
-
-b) FALSO, los metodos implementados en una clase llevan codigo asociado
-
-c) FALSO, la clase debe implementar TODOS los metodos de la interfaz 
-
-d) FALSO, define PARCIALMENTE un TDA, ya que solo tiene los metodos pero no los codigos
