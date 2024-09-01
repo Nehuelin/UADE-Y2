@@ -33,4 +33,4 @@ def encontrar_ultima_posicion(A: list):
 
 lista = [1, 5, 8, 9]
 generar_lista_infinita(lista)
-print(encontrar_ultima_posicion(lista))
+print(f"La posicion n en la lista es {encontrar_ultima_posicion(lista)}")
