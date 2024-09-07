@@ -5,3 +5,19 @@ mínimos.
 3 Ahora cambie el peso de la arista (3, 4) a −2. Muestre que el
 algoritmo de Dĳkstra no funciona en este caso
 
+1. CAMINOS MAS CORTOS:
+S-1-4-6
+S-4-3
+S-4-5
+
+ARBOL DE COSTOS MINIMOS DESDE VERTICE S:
+VERTICE 1 = 3
+VERTICE 2 = 4
+VERTICE 3 = 7
+VERTICE 4 = 6
+VERTICE 5 = 5
+VERTICE 6 = 7
+
+2. No, ya que se repiten los pesos entre algunas aristas
+
+3. No funciona debido a que el algoritmo asume que los pesos son positivos
