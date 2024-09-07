@@ -33,18 +33,23 @@ def huffman(C):
 
     for simbolo, frecuencia in C:
         nodo = NodoHuffman(simbolo, frecuencia)
-        cola.insert(nodo)
+        cola.insert(nodo) # 1) La construcción del árbol se realiza ordenando en primer lugar los simbolos con menor frecuencia
     
     while len(cola.heap) > 1:
+        # 2) Los dos nodos con menor frecuencia se introducen en el arbol y se quitan de la cola
         x = cola.extract_min()
         y = cola.extract_min()
         
+        # 3) Se conectan a un nodo cuyo peso es igual a la suma de los pesos de los dos simbolos
         nuevo_nodo = NodoHuffman(frecuencia=x.frecuencia + y.frecuencia, izquierdo=x, derecho=y)
         
+        # 4) A cada nodo formado se lo considera como un simbolo nuevo
         cola.insert(nuevo_nodo)
     
+    # 5) Los pasos 1 a 4 se repiten hasta que se obtiene un nodo principal llamado raíz
     return cola.extract_min()
 
+ # 6) El código de cada símbolo corresponde a la sucesión de códigos en el camino, comenzando desde la raíz. 
 def imprimir_arbol_huffman(nodo, codigo=""):
     if nodo is None:
         return
