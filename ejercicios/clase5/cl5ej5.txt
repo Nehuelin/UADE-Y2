@@ -1,0 +1,8 @@
+Considere el problema de calcular un árbol de recubrimiento máximo, es decir, un árbol de recubrimiento que maximice la suma de los costos de las aristas. 
+¿Pueden los algoritmos de Prim y Kruskal ayudarnos a solucionar este problema (asumiendo por supuesto que los algoritmos elijen la arista de cruce de costo máximo, en vez del minimo)?
+
+Respuesta: Si, ambos algoritmos pueden ser modificados para que elijan la arista de cruce de costo máximo en vez del mínimo.
+
+
+
+

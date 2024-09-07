@@ -1,0 +1,5 @@
+Queremos encontrar el costo mínimo entre dos vértices a y b de un grafo G y nos dan el árbol de recubrimiento mínimo de este grafo. 
+Entonces tomamos este árbol derecubrimiento mínimo y seguimos el camino desde a hasta b sumando los costos de cada arista.
+¿Es la respuesta que da este procedimiento correcta?
+
+Respuesta: No, porque el árbol de recubrimiento mínimo no necesariamente contiene el camino mínimo entre dos vértices.

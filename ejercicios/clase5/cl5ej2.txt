@@ -1,0 +1,6 @@
+Suponga que tiene un grafo no dirigido con pesos que pueden ser positivos o negativos. 
+¿Producen los algoritmos de Prim y Kruskal un árbol de recubrimiento mínimo para ese grafo?
+
+Respuesta: No, ya que los algoritmos de Prim y Kruskal asumen que los pesos son positivos.
+
+

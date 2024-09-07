@@ -1,0 +1,11 @@
+La propiedad de ciclo:
+Suponga que G es un grafo no dirigido con pesos.
+Suponga que el grafo tiene por lo menos un ciclo y elija alguno. 
+Para ese ciclo, supongamos que hay una arista e cuyo peso es estrictamente mayor que el de todas las otras aristas del ciclo. 
+Observe que una arista así no necesariamente existe, pero supondremos que en este caso sí. 
+Muestre que e no aparece en ningún árbol de recubrimiento mínimo de G
+
+Respuesta:
+Por definicion, un MST no tiene ciclos
+En el caso que hubiera uno, se considera redundante cualquier arista que forme parte de el, ya que siempre se puede eliminar sin afectar la conectividad del grafo.
+Es por eso que la arista e, al ser la de mayor peso en el ciclo, puede eliminarse sin aumentar el peso total del árbol de recubrimiento, y no puede estar en ningún árbol de recubrimiento mínimo. 

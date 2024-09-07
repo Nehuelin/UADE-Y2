@@ -1,0 +1,14 @@
+Navegación en el río Ctalamochita. 
+Usted planea navegar en canoa aguas abajo por el río Ctalamochita entre las ciudades de Morrison y Monte Leña. 
+Hay n puestos de canoas a lo largo de este trayecto. 
+Antes de comenzar su excursión, usted consigue para cada 1 ≤ i < j ≤ n, el precio fi,j para alquilar una canoa desde el puesto i hasta el puesto j.
+Estos precios son arbitrarios. Por ejemplo, es posible que sea f1,3 = 10 y f1,4 = 5. 
+Usted comienza en el puesto 1 y debe terminar en el puesto n (usando canoas alquiladas). 
+El objetivo es minimizar el costo. Muestre cómo podría aplicarse el algoritmo de Dĳkstra para resolver este problema.
+
+Respuesta:
+Se puede modelar el problema como un grafo dirigido con pesos en las aristas.
+Los vértices del grafo son los puestos de canoas y las aristas son los precios para alquilar una canoa entre dos puestos.
+Se puede aplicar el algoritmo de Dijkstra para encontrar el camino más barato entre el puesto 1 y el puesto n.
+
+

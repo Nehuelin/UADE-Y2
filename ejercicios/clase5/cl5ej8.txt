@@ -1,0 +1,7 @@
+1 Calcule el camino más corto desde s a todos los otros vértices
+usando el algoritmo de Dĳkstra. Determine el árbol de costos
+mínimos.
+2 ¿Es el árbol de costos mínimos único?
+3 Ahora cambie el peso de la arista (3, 4) a −2. Muestre que el
+algoritmo de Dĳkstra no funciona en este caso
+

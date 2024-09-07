@@ -1,0 +1,14 @@
+Usted trabaja para una compañía aérea que conecta varias ciudades de la provincia de Córdoba. 
+Cada aeropuerto cobra una tarifa para su uso; esta tarifa debe pagarse cuando el avión llega y cuando parte. 
+Usted calculó las conexiones de costo mínimo utilizando el algoritmo de Dĳkstra.
+Sucede que ahora, ante la proximidad de las elecciones, los intendentes de las ciudades tienen una gran necesidad de dinero. 
+Por lo tanto, proponen incrementar las tarifas de los aeropuertos un 20 %.
+La CEO de su compañía le dice que, dado que todas las tarifas se incrementan en el mismo porcentaje, es innecesario recalcular el algoritmo de Dĳkstra; 
+los trayectos de costo mínimo van a seguir siendo los mismos, según ella.
+¿Está la CEO en lo cierto?
+
+Respuesta: 
+No, ya que el algoritmo de Dijkstra encuentra el camino de costo mínimo en un grafo ponderado, donde las aristas representan los costos de viajar de un nodo (ciudad) a otro. 
+Si estos costos cambian, el algoritmo necesita recalcularse.
+Ademas, Un aumento del 20 % en las tarifas no garantiza que los costos relativos entre trayectos se mantendrán iguales. 
+Las conexiones de costo mínimo pueden cambiar debido a que la suma de tarifas no es uniforme para todos los trayectos.

@@ -1,0 +1,7 @@
+Pruebe que si un grafo no dirigido con pesos es tal que los pesos son todos diferentes, entonces su árbol de recubrimiento mínimo es único.
+Ayuda: la propiedad de corte dice que, si una arista es la de menor costo entre dos particiones de los vértices de un grafo, 
+entonces esta arista debe estar en todos los árboles de recubrimieno mínimo del grafo.
+
+Respuesta: Un grafo no dirigido con pesos tiene aristas con pesos distintos, entonces su árbol de recubrimiento mínimo es único debido a que, 
+por la propiedad de corte, las elecciones de las aristas para el MST están completamente determinadas, 
+y la unicidad de los pesos asegura que no puede haber ambigüedad en la elección de las aristas.
