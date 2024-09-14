@@ -1,4 +1,5 @@
 import heapq
+from collections import Counter
 
 class NodoHuffman:
     def __init__(self, simbolo=None, frecuencia=0, izquierdo=None, derecho=None):
@@ -28,6 +29,12 @@ class ColaPrioridadMinima:
 
 
 def huffman(C):
+    # simbolos = []
+    
+    # for simbolo in set(C):
+    #     frecuencia = C.count(simbolo)
+    #     simbolos.append((simbolo, frecuencia))
+
     cola = ColaPrioridadMinima()
 
     for simbolo, frecuencia in C:
@@ -54,9 +61,14 @@ def imprimir_arbol_huffman(nodo, codigo=""):
     imprimir_arbol_huffman(nodo.izquierdo, codigo + "0")
     imprimir_arbol_huffman(nodo.derecho, codigo + "1")
 
-
+def contar_frecuencias(palabra):
+    frecuencias = Counter(palabra)
+    return [(simbolo, frecuencia) for simbolo, frecuencia in frecuencias.items()]
 
 if __name__ == "__main__":
-    simbolos = [('a', 5), ('b', 9), ('c', 12), ('d', 13), ('e', 16), ('f', 45)]
+    palabra = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbccccccccccccddddddddddddddddeeeeeeeeefffff"
+    # palabra = "Hipopotamo"
+    simbolos = contar_frecuencias(palabra)
+    # simbolos = [('a', 45), ('b', 13), ('c', 12), ('d', 16), ('e', 9), ('f', 5)]
     raiz = huffman(simbolos)
     imprimir_arbol_huffman(raiz)
