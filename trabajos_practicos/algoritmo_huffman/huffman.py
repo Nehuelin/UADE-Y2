@@ -29,11 +29,6 @@ class ColaPrioridadMinima:
 
 
 def huffman(C):
-    # simbolos = []
-    
-    # for simbolo in set(C):
-    #     frecuencia = C.count(simbolo)
-    #     simbolos.append((simbolo, frecuencia))
 
     cola = ColaPrioridadMinima()
 
