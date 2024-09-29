@@ -8,3 +8,4 @@ def num_min_pesadas(n):
 
     # Siempre se realiza una pesada y luego se llama recursivamente al grupo más grande
     return 1 + num_min_pesadas(max(grupo1, grupo2, grupo3))
+# costo temporal O(log3(n))

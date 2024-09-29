@@ -1,14 +1,15 @@
 def fibonacci(n):
-    if n < 2:
-        return 1
+    fibo = []
+    if n <= 1:
+        return n
     else:
-        tabla = []
-        tabla.append(1)
-        tabla.append(1)
-        for i in range(2, n + 1):
-            tabla.append(tabla[i - 2] + tabla[i - 1])
-        return tabla[n - 1]
+        for i in range(n+1):
+            if i <= 1:
+                fibo.append(i)
+            else:
+                fibo.append(fibo[i-1] + fibo[i-2])
+        
+        return fibo[n]
 
-print(fibonacci(10)) 
-
+print(fibonacci(10))  # 55
 # Costo O(n), mejor que el algoritmo recursivo que tiene costo O(2^n)
