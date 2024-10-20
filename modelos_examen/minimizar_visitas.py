@@ -37,5 +37,6 @@ def visitas_minimas(S):
             ultima_visita = fin  
     return visitas
 
-S = [(8, 10), (9, 12), (11, 13), (11, 14), (13, 16), (17, 19)]
-visitas_minimas(S)
+# S = [(8, 10), (9, 12), (11, 13), (11, 14), (13, 16), (17, 19)]
+S = [(8, 11), (10, 14), (11, 12), (14, 17)]
+print(visitas_minimas(S))

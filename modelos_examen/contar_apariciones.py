@@ -108,5 +108,5 @@ def contarApariciones(V, x):
     return (indexB - indexA + 1)
 
 V = [1, 2, 3, 3, 3, 3, 3, 6, 7, 8, 9]
-print(contarApariciones(V, 3)) 
+print(contarApariciones(V, 0)) 
 
