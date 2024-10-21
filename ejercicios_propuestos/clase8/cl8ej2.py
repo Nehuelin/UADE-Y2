@@ -1,3 +1,6 @@
+# Se tiene un grafo dirigido G = (V,E) representado como una matriz de adyacencia. 
+# Escriba un programa que enumere todos los caminos de un vértice s ∈ V cualquiera que pasen a lo sumo una vez por cada vértice.
+
 class Grafo:
     def __init__(self):
         self.matriz = []
@@ -59,3 +62,34 @@ class Grafo:
                     vecinos.append(self.vertices[j])
             return vecinos
         return []
+    
+def EnumerarCaminos(G, s):
+    if s not in G.vertices:
+        return
+    dfs(G, s, set(), [])
+    
+def dfs(G: Grafo, v: int, visitados: set, camino: list):
+    visitados.add(v)
+    camino.append(v)
+
+    print(" -> ".join(camino))
+    
+    for vecino in G.Vecindario(v):
+        if vecino not in visitados:
+            dfs(G, vecino, visitados, camino)
+
+    camino.pop()
+    visitados.remove(v)
+
+g = Grafo()
+g.AgregarVertice('A')
+g.AgregarVertice('B')
+g.AgregarVertice('C')
+g.AgregarVertice('D')
+
+g.AgregarArista('A', 'B', 1)
+g.AgregarArista('A', 'C', 1)
+g.AgregarArista('B', 'C', 1)
+g.AgregarArista('C', 'D', 1)
+
+EnumerarCaminos(g, 'A')

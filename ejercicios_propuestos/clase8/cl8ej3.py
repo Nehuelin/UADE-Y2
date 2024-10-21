@@ -1,3 +1,8 @@
+# Se tiene un conjunto de salas numeradas del 0 hasta n. 
+# Las salas están comunicadas entre sí a través de puertas que se abren solamente en el sentido de la numeración creciente (si una puerta permite pasar de la sala i a la sala j, entonces i < j.) 
+# Todas las salas tienen un puerta saliente, excepto, por supuesto, la sala n. 
+# Construya un algoritmo que permita ir desde la sala 0 a la sala n atravesando la máxima cantidad de salas.
+
 class Grafo:
     def __init__(self):
         self.matriz = []
@@ -59,3 +64,47 @@ class Grafo:
                     vecinos.append(self.vertices[j])
             return vecinos
         return []
+    
+def camino_mas_largo(G):
+    return DFS(G, 1, set(), [])
+
+def DFS(G: Grafo, sala: int, visitados: set, camino_actual: list):
+    n = max(G.vertices)
+    if sala == n:
+        return len(camino_actual), camino_actual
+    
+    visitados.add(sala)
+    camino_actual.append(sala)
+
+    max_length = 0
+    max_camino = []
+
+    for siguiente in range(sala + 1, n + 1):
+        if G.ExisteArista(sala, siguiente) and siguiente not in visitados:
+            longitud, camino = DFS(G, siguiente, visitados, camino_actual)
+            if longitud > max_length:
+                max_length = longitud
+                max_camino = camino
+    
+    # camino_actual.pop()
+    # visitados.remove(sala)
+
+    return max_length, max_camino
+
+
+# Test
+G = Grafo()
+G.AgregarVertice(1)
+G.AgregarVertice(2)
+G.AgregarVertice(3)
+G.AgregarVertice(4)
+G.AgregarVertice(5)
+G.AgregarVertice(6)
+G.AgregarArista(1, 2, 1)
+G.AgregarArista(1, 3, 1)
+G.AgregarArista(2, 5, 1)
+G.AgregarArista(3, 4, 1)
+G.AgregarArista(4, 5, 1)
+G.AgregarArista(5, 6, 1)
+
+print(camino_mas_largo(G))

@@ -59,3 +59,16 @@ class Grafo:
                     vecinos.append(self.vertices[j])
             return vecinos
         return []
+
+def busqueda_profunda(G, v):
+    DFS(G, v, set())
+
+def DFS(G: Grafo, v: int, visitados: set):
+    visitados.add(v)
+    print(v)
+    vecindario = G.Vecindario(v)
+    while len(vecindario) > 0:
+        a = vecindario.pop()
+        if a not in visitados:
+            DFS(G, a, visitados)
+
