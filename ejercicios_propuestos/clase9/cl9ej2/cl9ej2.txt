@@ -1,0 +1,12 @@
+Dadas n = 4 variables binarias xj sujetas a las restricciones de que debe ser x1 = x2 y el número de variables con valor 1 debe ser impar:
+a. Dibuje el árbol de permutaciones de este problema para un algoritmo de backtracking.
+b. Encuentre las soluciones a este problema.
+c. ¿Cuántos nodos se generan? ¿Cuántos sobreviven y cuántos son eliminados?
+d. ¿Cuál es la eficiencia del método comparado con un algoritmo de fuerza bruta? 
+O, si lo prefiere, ¿Cuántos nodos se generan con este algoritmo y cuántos se generarían con un método de pura fuerza bruta?
+
+RESPUESTAS:
+a. Ver jpg
+b. SOLUCIONES: [0100], [0111], [1000], [1011]
+c. Se generan 18 nodos, de los cuales 12 sobreviven y 6 son eliminados
+d. Si se utilizar un metodo de fuerza bruta, se generarian 30 nodos (12 mas que con el metodo anterior)

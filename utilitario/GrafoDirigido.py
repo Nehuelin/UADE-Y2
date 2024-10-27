@@ -1,4 +1,4 @@
-class Grafo:
+class GrafoDirigido:
     def __init__(self):
         self.matriz = []
         self.vertices = []

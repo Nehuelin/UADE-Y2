@@ -1,0 +1,5 @@
+El problema de la coloración de un grafo consiste en asignar colores a los vértices de un grafo de manera que no haya dos vértices adyacentes con el mismo color. 
+Considere el grafo no dirigido G = (V,E) con V = {A,B,C.D.E} y E = {(A,B),(A,E),(C,D),(D,E)}). 
+Dibuje el árbol de permutaciones que representa un algoritmo de backtracking para encontrar una 
+posible coloración de este grafo usando sólo dos colores (por ejemplo, rojo y negro).
+

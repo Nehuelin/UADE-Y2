@@ -1,4 +1,4 @@
-import Grafo
+import utilitario.GrafoDirigido as GrafoDirigido
 
 def diferencia(A, B):
     C = []
@@ -13,9 +13,9 @@ def copiar(A):
         B.append(i)
     return B
 
-def dijkstra(G: Grafo, v: int):
+def dijkstra(G: GrafoDirigido, v: int):
     visitados = {}
-    Dijkstra = Grafo()
+    Dijkstra = GrafoDirigido()
     Dijkstra.InicializarGrafo()
     for w in G.vertices:
         Dijkstra.AgregarVertice(w)

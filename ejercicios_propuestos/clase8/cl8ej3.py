@@ -66,30 +66,28 @@ class Grafo:
         return []
     
 def camino_mas_largo(G):
-    return DFS(G, 1, set(), [])
+    max_length = [-1]
+    max_camino = [None]
+    DFS(G, 1, set(), [], max_length, max_camino)
+    return max_length, max_camino
 
-def DFS(G: Grafo, sala: int, visitados: set, camino_actual: list):
+def DFS(G: Grafo, sala: int, visitados: set, camino_actual: list, max_length: int, max_camino: list):
     n = max(G.vertices)
-    if sala == n:
-        return len(camino_actual), camino_actual
-    
     visitados.add(sala)
     camino_actual.append(sala)
+    vecindario = G.Vecindario(sala)
 
-    max_length = 0
-    max_camino = []
+    if sala == n and esUltimoElemento(sala, camino_actual) and len(camino_actual) > max_length[0]:
+        max_length[0] = len(camino_actual)
+        max_camino[0] = camino_actual[:max_length[0]]
 
-    for siguiente in range(sala + 1, n + 1):
-        if G.ExisteArista(sala, siguiente) and siguiente not in visitados:
-            longitud, camino = DFS(G, siguiente, visitados, camino_actual)
-            if longitud > max_length:
-                max_length = longitud
-                max_camino = camino
+    while len(vecindario) > 0:
+        a = vecindario.pop()
+        if a not in visitados:
+            DFS(G, a, visitados, camino_actual, max_length, max_camino)
     
-    # camino_actual.pop()
-    # visitados.remove(sala)
-
-    return max_length, max_camino
+def esUltimoElemento(valor: int, lista: list):
+    return valor == lista[len(lista) - 1]
 
 
 # Test
