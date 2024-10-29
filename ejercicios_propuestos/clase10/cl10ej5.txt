@@ -1,0 +1,10 @@
+Un juego muy simple de dos jugadores. 
+Se comienza con un grupo de n objetos (monedas, fósforos, lo que sea). 
+En cada turno, un jugador debe dividir el grupo existente en dos. 
+Por supuesto, un grupo de un solo elemento no puede ser dividido. 
+El jugador que no puede dividir ningún grupo pierde el juego.
+Dibuje el árbol del juego comenzando por un grupo de 6 objetos. 
+Determine cuáles son los nodos N y los nodos P. ¿Qué conclusiones puede extraer?
+
+RESPUESTA
+Se puede concluir en que el jugador que inicie en el primer turno ganará el juego
