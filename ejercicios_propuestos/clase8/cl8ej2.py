@@ -73,13 +73,14 @@ def dfs(G: Grafo, v: int, visitados: set, camino: list):
     camino.append(v)
 
     print(" -> ".join(camino))
-    
-    for vecino in G.Vecindario(v):
-        if vecino not in visitados:
-            dfs(G, vecino, visitados, camino)
+
+    vecindario = G.Vecindario(v)
+    while len(vecindario) > 0:
+        a = vecindario.pop()
+        if a not in visitados:
+            dfs(G, a, visitados, camino)
 
     camino.pop()
-    visitados.remove(v)
 
 g = Grafo()
 g.AgregarVertice('A')

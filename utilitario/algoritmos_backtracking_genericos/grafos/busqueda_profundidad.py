@@ -1,3 +1,16 @@
+# Busqueda en Profundidad (DFS)
+
+# DFS (G: Grafo, V: entero, Visitados: conjunto){ // sea V el vertice donde se investiga los caminos
+# 	Visitados.agregar(V)
+# 	Vecindario = G.vecindario(V)
+# 	mientras (len(Vecindario) > 0){
+# 		entero A = vecindario.pop()
+# 		si (A no está en Visitados) {
+# 			DFS(G, A, Visitados)
+# 		}
+# 	}	
+# }
+
 class Grafo:
     def __init__(self):
         self.matriz = []

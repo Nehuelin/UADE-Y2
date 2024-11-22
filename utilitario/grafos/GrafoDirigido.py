@@ -3,7 +3,7 @@ class GrafoDirigido:
         self.matriz = []
         self.vertices = []
 
-    def AgregarVertice(self, v):
+    def agregar_vertice(self, v):
         if v not in self.vertices:
             self.vertices.append(v)
             for i in range(len(self.matriz)):
@@ -13,7 +13,7 @@ class GrafoDirigido:
                 aux.append(0)
             self.matriz.append(aux)
 
-    def EliminarVertice(self, v):
+    def eliminar_vertice(self, v):
         if v in self.vertices:
             i = self.vertices.index(v)
             self.vertices.remove(v)
@@ -21,36 +21,36 @@ class GrafoDirigido:
             for i in range(len(self.matriz)):
                 self.matriz[i].pop(i)
 
-    def AgregarArista(self, v1, v2, p):
+    def agregar_arista(self, v1, v2, p):
         if v1 in self.vertices and v2 in self.vertices:
             i = self.vertices.index(v1)
             j = self.vertices.index(v2)
             self.matriz[i][j] = p
 
-    def EliminarArista(self, v1, v2):
+    def eliminar_arista(self, v1, v2):
         if v1 in self.vertices and v2 in self.vertices:
             i = self.vertices.index(v1)
             j = self.vertices.index(v2)
             self.matriz[i][j] = 0
 
-    def PesoArista(self, v1, v2):
+    def peso_arista(self, v1, v2):
         if v1 in self.vertices and v2 in self.vertices:
             i = self.vertices.index(v1)
             j = self.vertices.index(v2)
             return self.matriz[i][j]
         return 0
 
-    def Vertices(self):
+    def vertices(self):
         return self.vertices
 
-    def ExisteArista(self, v1, v2):
+    def existe_arista(self, v1, v2):
         if v1 in self.vertices and v2 in self.vertices:
             i = self.vertices.index(v1)
             j = self.vertices.index(v2)
             return self.matriz[i][j] != 0
         return False
     
-    def Vecindario(self, v):
+    def vecindario(self, v):
         if v in self.vertices:
             i = self.vertices.index(v)
             vecinos = []
