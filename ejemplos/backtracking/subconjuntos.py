@@ -20,4 +20,4 @@ def suma_sublista_rec(v, m, solucion, suma, e):
             if suma <= m:
                 suma_sublista_rec(v, m, solucion, suma, e + 1)
 
-suma_sublista([3, 2, 5, 8, 2, 7, 3], 11)
+suma_sublista([3, 5, 8, 2, 7, 3], 11)

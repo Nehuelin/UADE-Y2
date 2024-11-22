@@ -1,4 +1,4 @@
-import utilitario.GrafoDirigido as GrafoDirigido
+import utilitario.grafos.GrafoDirigido as GrafoDirigido
 
 def diferencia(A, B):
     C = []
