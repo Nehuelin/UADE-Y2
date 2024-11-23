@@ -11,3 +11,5 @@ def raiz_cuadrada_entera(n, low, high):
         return raiz_cuadrada_entera(n, mid + 1, high)
     else:
         return raiz_cuadrada_entera(n, low, mid - 1)
+    
+print(raiz_cuadrada_entera(18, 0, 18))

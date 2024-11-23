@@ -1,4 +1,4 @@
-def Escabio(e: int, n: int): # e -> estado, # n es 1 (MAX) o -1 (MIN)
+def Escabio(e: int, n: int): # e -> estado, n es 1 (MAX) o -1 (MIN)
     if e == 0:
         return n # si no hay mas turnos, el jugador de turno gana
     else:
@@ -21,6 +21,6 @@ def Escabio(e: int, n: int): # e -> estado, # n es 1 (MAX) o -1 (MIN)
 
 jugador_ganador = Escabio(11, 1)
 if jugador_ganador == 1:
-    print("MAX ganó la partida")
+    print("MAX gano la partida")
 else:
-    print("MIN ganó la partida")
+    print("MIN gano la partida")

@@ -14,7 +14,7 @@ def particion_rec(v, s, e):
                 else:
                     coleccion_derecha += v[j]
             if coleccion_izquierda == coleccion_derecha:
-                print(s)
+                print(coleccion_izquierda, coleccion_derecha)
         else:
             particion_rec(v, s, e + 1)
 
